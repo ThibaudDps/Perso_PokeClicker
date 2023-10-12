@@ -22,9 +22,9 @@ function App() {
 
   return (
     <div>
-      {count}🍩
+      {count}
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      <Button />
+      <Button count={count} setCount={setCount} images={pokemonList} />
       <Navbar
         pokemonIndex={pokemonIndex}
         handleClickPrecedent={handleClickPrecedent}

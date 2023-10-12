@@ -1,8 +1,8 @@
-import React from "react";
+import "../styles/Button.css";
 
 const Button = ({ count, setCount }) => {
   return (
-    <div>
+    <div className="button_top">
       <button onClick={() => setCount(count + 1)}>TRAIN</button>
     </div>
   );
