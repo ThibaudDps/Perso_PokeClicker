@@ -8,10 +8,6 @@ function PokemonCard({ pokemon }) {
 
   return (
     <figure className="card">
-      <img
-        className="iconPkmn"
-        src="https://www.pokencyclopedia.info/sprites/menu-icons/ico-a_gbc/ico-a_2_100.gif"
-      />
       <h2>{capitalizeFirstLetter(pokemon.name)}</h2>
       <div className="cardBody">
         {pokemon.imgSrc ? (

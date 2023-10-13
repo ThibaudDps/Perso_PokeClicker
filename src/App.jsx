@@ -22,7 +22,6 @@ function App() {
 
   return (
     <div>
-      {count}
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
       <Button count={count} setCount={setCount} images={pokemonList} />
       <Navbar
@@ -31,6 +30,7 @@ function App() {
         handleClickSuivant={handleClickSuivant}
         maxIncrement={pokemonList.length - 1}
       />
+      {count}
     </div>
   );
 }

@@ -1,30 +1,38 @@
+body {
+  background-image: url("https://i.goopics.net/lvnmq2.png");
+  background-color: rgb(9, 9, 9);
+  background-size: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P';
+  font-size: 12px;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 6.4rem;
+  color: black;
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
+
 .imgPkmn {
   width: 300px;
 }
 
-.iconPkmn {
-  width: 20px;
-}
-
 .card {
   width: 200px;
-  padding: 1rem;
-  background-color: rgb(99, 99, 99);
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px rgb(27, 27, 27);
-  color: white;
-  font-size: 1.6rem;
+  padding: 2.3rem;
+  background-color: rgba(99, 99, 99, 0);
+  color: rgb(25, 32, 23);
+  font-size: 0.6rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -33,19 +41,16 @@
 
 .card-img {
   transform: scale(1.6);
-  width: 100%;
-  height: auto;
-  margin-bottom: 0.5rem;
+  width: 100%;;
   background-color: rgba(255, 255, 255, 0);
   transition: transform 0.2s ease-in;
 }
 
 .cardBody {
-  background-color: rgb(219, 219, 219);
   border-image: url(https://luttje.github.io/css-pokemon-gameboy/styles/images/frame-hd.png) 42 round;
   border-width: 19px;
   border-style: solid;
-  padding: 1em;
+  padding: 1rem;
   width: 100%;
   max-width: 50%;
 }
@@ -70,3 +75,14 @@
   transition: opacity 0.2s ease-in;
 }
 
+.navBar {
+  margin-top: 95px;
+  display: flex;
+  position: absolute;
+}
+
+.navBar button {
+  margin: 1px 40px 0 -10px;
+  padding: 1px 10px 10px 10px;
+  font-size: 20px;
+}

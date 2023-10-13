@@ -5,12 +5,12 @@ function Navbar({
   maxIncrement,
 }) {
   return (
-    <div>
+    <div className="navBar">
       {pokemonIndex > 0 ? (
-        <button onClick={handleClickPrecedent}>Précedent</button>
+        <button onClick={handleClickPrecedent}>◂</button>
       ) : null}{" "}
       {pokemonIndex < maxIncrement ? (
-        <button onClick={handleClickSuivant}>Suivant</button>
+        <button onClick={handleClickSuivant}>▸</button>
       ) : null}
     </div>
   );
