@@ -25,3 +25,9 @@
 .listpkmn li:hover {
   transform: scale(1.4);
 }
+
+.selected {
+  background-image: url("C:\Users\Utilisateur\Documents\Formation\wild-git\pokeclicker\src\assets\pokeball-white.png");
+  background-position: center;
+  background-size: cover;
+}
