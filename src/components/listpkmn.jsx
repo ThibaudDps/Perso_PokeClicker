@@ -8,7 +8,7 @@ function ListPkmn({
 }) {
   return (
     <div className="listpkmn">
-      <h3>PKMN TEAM</h3>
+      <h3>EVOLUTION</h3>
       <ul>
         {pokemonList.map((pokemon, index) => (
           <li
