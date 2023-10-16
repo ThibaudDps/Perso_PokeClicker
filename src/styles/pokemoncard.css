@@ -1,0 +1,84 @@
+
+.imgPkmn {
+  width: 300px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Ajustez cette ligne pour aligner verticalement le contenu */
+  align-items: center; /* Ajustez cette ligne pour aligner horizontalement le contenu */
+  width: 200px;
+  padding: 2rem;
+  background-color: rgba(99, 99, 99, 0);
+  color: rgb(25, 32, 23);
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.card-img {
+  transform: scale(1.6);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: transform 0.2s ease-in;
+}
+
+.frame {
+  border-image: url(https://luttje.github.io/css-pokemon-gameboy/styles/images/frame-hd.png) 42 round;
+  border-width: 19px;
+  border-style: solid;
+  padding: 1rem;
+  max-width: 50%;
+}
+
+.card-img:hover {
+  transform: scale(1.8);
+  transition: transform 0.2s ease-in, width 0.2s ease-in;
+}
+
+.card-img:hover::after {
+  content: "Cliquez pour agrandir";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  transition: opacity 0.2s ease-in;
+}
+
+
+.card-img {
+    transform: scale(1.6);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: transform 0.2s ease-in;
+  }
+
+.frame {
+    border-image: url(https://luttje.github.io/css-pokemon-gameboy/styles/images/frame-hd.png) 42 round;
+    border-width: 19px;
+    border-style: solid;
+    padding: 1rem;
+    max-width: 50%;
+  }
+
+.card-img:hover {
+    transform: scale(1.8);
+    transition: transform 0.2s ease-in, width 0.2s ease-in;
+  }
+
+  .card-img:hover::after {
+    content: "Cliquez pour agrandir";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    transition: opacity 0.2s ease-in;
+  }
