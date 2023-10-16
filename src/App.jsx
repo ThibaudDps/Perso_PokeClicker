@@ -2,22 +2,34 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
-import Button from "./components/button";
-import Navbar from "./components/navbar";
-import ListPkmn from "./components/listpkmn";
+import Button from "./components/Button";
+import Navbar from "./components/Navbar";
+import ListPkmn from "./components/ListPkmn";
 
 function App() {
-  const [pokemonIndex, setpokemonIndex] = useState(0);
+  const [pokemonIndex, setPokemonIndex] = useState(0);
   const [count, setCount] = useState(0);
 
   const handleClickPrecedent = () => {
     if (pokemonIndex > 0) {
-      setpokemonIndex(pokemonIndex - 1);
+      setPokemonIndex(pokemonIndex - 1);
     }
   };
+
   const handleClickSuivant = () => {
     if (pokemonIndex < pokemonList.length - 1) {
-      setpokemonIndex(pokemonIndex + 1);
+      setPokemonIndex(pokemonIndex + 1);
+    }
+  };
+
+  const handleImageChange = () => {
+    if (count >= 9) {
+      setPokemonIndex((prevIndex) =>
+        prevIndex < pokemonList.length - 1 ? prevIndex + 1 : 0
+      );
+      setCount(0);
+    } else {
+      setCount(count + 1);
     }
   };
 
@@ -27,7 +39,7 @@ function App() {
         <ListPkmn
           pokemonList={pokemonList}
           selectedPokemonIndex={pokemonIndex}
-          setSelectedPokemonIndex={setpokemonIndex}
+          setSelectedPokemonIndex={setPokemonIndex}
         />
         <PokemonCard pokemon={pokemonList[pokemonIndex]} />
         {count}{" "}
@@ -39,12 +51,15 @@ function App() {
           handleClickSuivant={handleClickSuivant}
           maxIncrement={pokemonList.length - 1}
         />
-        <Button count={count} setCount={setCount} images={pokemonList} />
+        <Button
+          count={count}
+          setCount={handleImageChange}
+          images={pokemonList}
+        />
       </div>
     </div>
   );
 }
-
 export default App;
 
 const pokemonList = [
