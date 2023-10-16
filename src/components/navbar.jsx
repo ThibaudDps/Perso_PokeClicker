@@ -1,3 +1,5 @@
+import "../styles/navbar.css";
+
 function Navbar({
   pokemonIndex,
   handleClickPrecedent,
@@ -6,12 +8,8 @@ function Navbar({
 }) {
   return (
     <div className="navBar">
-      {pokemonIndex > 0 ? (
-        <button onClick={handleClickPrecedent}>◂</button>
-      ) : null}{" "}
-      {pokemonIndex < maxIncrement ? (
-        <button onClick={handleClickSuivant}>▸</button>
-      ) : null}
+      <button onClick={handleClickPrecedent}>◂</button>{" "}
+      <button onClick={handleClickSuivant}>▸</button>
     </div>
   );
 }

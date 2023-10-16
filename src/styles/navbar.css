@@ -1,0 +1,10 @@
+.navBar {
+grid-area: navbar;
+}
+
+.navBar button {
+  background-color: rgb(24, 24, 24);
+  padding: 0 10px 10px 10px;
+  margin-right: 25px;
+  font-size: 20px;
+}

@@ -1,9 +1,11 @@
 body {
   background-image: url("https://i.goopics.net/lvnmq2.png");
-  background-color: rgb(9, 9, 9);
+  background-color: rgb(0, 0, 0);
   background-size: 1000px;
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: 'Press Start 2P';
@@ -11,78 +13,28 @@ body {
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 6.4rem;
-  color: black;
-  text-align: center;
   display: flex;
   justify-content: center;
+  color: rgb(255, 255, 255);
+  padding: 4rem;
+}
+
+.affichage {
+  padding: 5.5rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 6rem;
   align-items: center;
+
 }
 
+.input {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". navbar train .";
+  align-items: end;
+  justify-items: center;
 
-
-.imgPkmn {
-  width: 300px;
-}
-
-.card {
-  width: 200px;
-  padding: 2.3rem;
-  background-color: rgba(99, 99, 99, 0);
-  color: rgb(25, 32, 23);
-  font-size: 0.6rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card-img {
-  transform: scale(1.6);
-  width: 100%;;
-  background-color: rgba(255, 255, 255, 0);
-  transition: transform 0.2s ease-in;
-}
-
-.cardBody {
-  border-image: url(https://luttje.github.io/css-pokemon-gameboy/styles/images/frame-hd.png) 42 round;
-  border-width: 19px;
-  border-style: solid;
-  padding: 1rem;
-  width: 100%;
-  max-width: 50%;
-}
-
-
-.card-img:hover {
-  transform: scale(1.8);
-  transition: transform 0.2s ease-in, width 0.2s ease-in;
-}
-
-.card-img:hover::after {
-  content: "Cliquez pour agrandir";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  transition: opacity 0.2s ease-in;
-}
-
-.navBar {
-  margin-top: 95px;
-  display: flex;
-  position: absolute;
-}
-
-.navBar button {
-  margin: 1px 40px 0 -10px;
-  padding: 1px 10px 10px 10px;
-  font-size: 20px;
 }
